@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+void Page_61_Ex_1 (void);
 void page_62_Ex_2 (void);
 void Page_63_Ex_3 (void);
 
@@ -12,14 +13,27 @@ int main()
 
     switch (select)
     {
-    case (1): page_62_Ex_2 (); break;
-    case (2): Page_63_Ex_3(); break;
+    case (1): Page_61_Ex_1(); break;
+    case (2): page_62_Ex_2 (); break;
+    case (3): Page_63_Ex_3(); break;
     default: cout << "Error";
     }
 
     return 0;
 }
 
+
+void Page_61_Ex_1(void)
+{
+    for (int line=1 ; line<=5 ; line++)
+    {
+        for (int n=1 ; n<=line ; n++)
+            cout << n << " ";
+
+        cout << endl;
+    }
+    main();
+}
 
 void page_62_Ex_2 (void)
 {
