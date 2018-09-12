@@ -8,7 +8,7 @@ void Page_63_Ex_3 (void);
 int main()
 {
     int select = 0;
-    cout << "select the exercises that you want to run : ";
+    cout << endl << "select the exercises that you want to run : ";
     cin >> select;
 
     switch (select)
