@@ -1,0 +1,27 @@
+1. What the following program does without running it?
+#include <iostream>
+using namespace std;
+int main( ) {
+int x = 5;
+int y = 7;
+cout << x + y << “ ” << x * y;
+cout << endl;
+return 0;
+}
+
+Output is : 12 35
+----------------------------------------------------------
+2. What should be corrected in the following program?
+include <iostream>
+using namespace std;
+int main( ) {
+cout << "Hello World \n";
+return 0;
+}
+
+Output is : print (Hello World) then print new line
+----------------------------------------------------------
+3. What is the output of: cout << “\”Run, Spot, run,\” she said.”;
+
+Output is : print ("Run, Spot, run," she said.)
+----------------------------------------------------------
