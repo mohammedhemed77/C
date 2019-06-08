@@ -8,26 +8,27 @@ int main()
     char again = 'y';
     //this date must be date of first day in shift
     long int refDay=5, refMon=6, refYear=2019;
-    long int s1Day,s2Day,h1Day,h2Day,h3Day,h4Day;
+    long int s1Day,s2Day,h1Day,h2Day,h3Day,h4Day,temp=0;
     long int day,mon,year;
 
     //calculate code of all shifts & holidays
     s1Day = dayCoding (refDay,refMon,refYear);
-    refDay++;
+    temp = s1Day;
+    temp++;
 
-    s2Day = dayCoding (refDay,refMon,refYear);
-    refDay++;
+    s2Day = temp;
+    temp++;
 
-    h1Day = dayCoding (refDay,refMon,refYear);
-    refDay++;
+    h1Day = temp;
+    temp++;
 
-    h2Day = dayCoding (refDay,refMon,refYear);
-    refDay++;
+    h2Day = temp;
+    temp++;
 
-    h3Day = dayCoding (refDay,refMon,refYear);
-    refDay++;
+    h3Day = temp;
+    temp++;
 
-    h4Day = dayCoding (refDay,refMon,refYear);
+    h4Day = temp;
 
     while (again=='y' || again=='Y')
     {
