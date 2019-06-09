@@ -1,15 +1,15 @@
 #include <iostream>
-int dayCoding (int,int,int);
-void calc (int,int,int,int,int,int,int);
+long long dayCoding (long long &,long long &,long long &);
+void calc (long long &,long long &,long long &,long long &,long long &,long long &,long long &);
 using namespace std;
 
-int main()
+int main ()
 {
     char again = 'y';
     //this date must be date of first day in shift
-    long int refDay=5, refMon=6, refYear=2019;
-    long int s1Day,s2Day,h1Day,h2Day,h3Day,h4Day;
-    long int day,mon,year;
+    long long refDay=5, refMon=6, refYear=2019;
+    long long s1Day,s2Day,h1Day,h2Day,h3Day,h4Day;
+    long long day,mon,year;
 
     //calculate code of all shifts & holidays
     s1Day = dayCoding (refDay,refMon,refYear);
@@ -34,7 +34,7 @@ int main()
 }
 
 //calculate code of any date passing
-int dayCoding (int day, int mon, int year)
+long long dayCoding (long long &day, long long &mon, long long &year)
 {
     if (mon==1) //if month passed as January year minus by 1 and month became December
     {
@@ -68,7 +68,7 @@ int dayCoding (int day, int mon, int year)
     return day;
 }
 
-void calc (int day, int s1Day, int s2Day, int h1Day, int h2Day, int h3Day, int h4Day)
+void calc (long long &day, long long &s1Day, long long &s2Day, long long &h1Day, long long &h2Day, long long &h3Day, long long &h4Day)
 {
     while (day>h4Day) day-=6;
     while (day<s1Day) day+=6;
