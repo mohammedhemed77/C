@@ -1,7 +1,7 @@
 #include <iostream>
 long long dayCoding (long long &,long long &,long long &);
 void calc (long long &,long long &,long long &,long long &,long long &,long long &,long long &);
-void calcDay (long long day);
+void calcDay (long long &);
 
 using namespace std;
 
@@ -88,7 +88,7 @@ void calc (long long &day, long long &s1Day, long long &s2Day, long long &h1Day,
     cout << endl;
 }
 
-void calcDay (long long day)
+void calcDay (long long &day)
 {
 	day%=7;
 	switch (day)
