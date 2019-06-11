@@ -90,18 +90,18 @@ void calc (long long &day, long long &s1Day, long long &s2Day, long long &h1Day,
 
 void calcDay (long long &day)
 {
-	day%=7;
-	switch (day)
-	{
-		case 1: cout << "Sunday"; break;
-		case 2: cout << "Monday"; break;
-		case 3: cout << "Tuesday"; break;
-		case 4: cout << "Wednesday"; break;
-		case 5: cout << "Thuresday"; break;
-		case 6: cout << "Friday"; break;
-		case 0:
-		case 7: cout << "Sturday"; break;
-		default : cout << "Error day No. : " << day; break;
-	}
-	cout << endl;
+    day%=7;
+    switch (day)
+    {
+        case 1: cout << "Sunday"; break;
+	case 2: cout << "Monday"; break;
+	case 3: cout << "Tuesday"; break;
+	case 4: cout << "Wednesday"; break;
+	case 5: cout << "Thuresday"; break;
+	case 6: cout << "Friday"; break;
+	case 0:
+	case 7: cout << "Sturday"; break;
+	default : cout << "Error day No. : " << day; break;
+    }
+    cout << endl;
 }
