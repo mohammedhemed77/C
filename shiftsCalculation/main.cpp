@@ -85,7 +85,6 @@ void calc (long long &day, long long &s1Day, long long &s2Day, long long &h1Day,
     else if (day==h2Day) cout << "Second day holiday";
     else if (day==h3Day) cout << "Third day holiday";
     else if (day==h4Day) cout << "Fourth day holiday";
-    cout << endl;
 }
 
 void calcDay (long long &day)
