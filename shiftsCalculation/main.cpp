@@ -1,6 +1,8 @@
 #include <iostream>
 long long dayCoding (long long &,long long &,long long &);
 void calc (long long &,long long &,long long &,long long &,long long &,long long &,long long &);
+void calcDay (int day);
+
 using namespace std;
 
 int main ()
@@ -27,6 +29,7 @@ int main ()
 
         day = dayCoding (day,mon,year);
         calc (day,s1Day,s2Day,h1Day,h2Day,h3Day,h4Day);
+        void calcDay (int day);
         cout << endl << "Do you want to try again ? y/n : ";
         cin >> again;
     }
@@ -79,4 +82,23 @@ void calc (long long &day, long long &s1Day, long long &s2Day, long long &h1Day,
     else if (day==h2Day) cout << "Second day holiday";
     else if (day==h3Day) cout << "Third day holiday";
     else if (day==h4Day) cout << "Fourth day holiday";
+    Cout << endl;
+}
+
+void calcDay (int day)
+{
+	day%=7;
+	switch (day)
+	{
+		case 1: cout << "Sunday"; break;
+		case 2: cout << "Monday"; break;
+		case 3: cout << "Tuesday"; break;
+		case 4: cout << "Wednesday"; break;
+		case 5: cout << "Thuresday"; break;
+		case 6: cout << "Friday"; break;
+		case 0:
+		case 7: cout << "Sturday"; break;
+		default : cout << "Error day No. : " << day; break;
+	}
+	cout << endl;
 }
