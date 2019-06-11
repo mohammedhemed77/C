@@ -1,7 +1,7 @@
 #include <iostream>
 long long dayCoding (long long &,long long &,long long &);
 void calc (long long &,long long &,long long &,long long &,long long &,long long &,long long &);
-void calcDay (int day);
+void calcDay (long long day);
 
 using namespace std;
 
@@ -28,8 +28,11 @@ int main ()
         cout << "Enter year : "; cin >> year;
 
         day = dayCoding (day,mon,year);
+        
         calc (day,s1Day,s2Day,h1Day,h2Day,h3Day,h4Day);
-        void calcDay (int day);
+        
+        calcDay (day);
+       
         cout << endl << "Do you want to try again ? y/n : ";
         cin >> again;
     }
@@ -85,7 +88,7 @@ void calc (long long &day, long long &s1Day, long long &s2Day, long long &h1Day,
     cout << endl;
 }
 
-void calcDay (int day)
+void calcDay (long long day)
 {
 	day%=7;
 	switch (day)
