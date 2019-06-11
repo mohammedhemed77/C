@@ -29,9 +29,9 @@ int main ()
 
         day = dayCoding (day,mon,year);
         
-        calc (day,s1Day,s2Day,h1Day,h2Day,h3Day,h4Day);
-        
         calcDay (day);
+
+        calc (day,s1Day,s2Day,h1Day,h2Day,h3Day,h4Day);
        
         cout << endl << "Do you want to try again ? y/n : ";
         cin >> again;
