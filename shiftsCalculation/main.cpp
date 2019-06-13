@@ -23,17 +23,18 @@ int main ()
 
     while (again=='y' || again=='Y')
     {
-        cout << "Enter day : "; cin >> day;
-        cout << "Enter month : "; cin >> mon;
-        cout << "Enter year : "; cin >> year;
+        cout << "Enter day: "; cin >> day;
+        cout << "Enter month: "; cin >> mon;
+        cout << "Enter year: "; cin >> year;
+        cout << "-------------------------------" << endl;
 
         day = dayCoding (day,mon,year);
-        
+
         calcDay (day);
 
         calc (day,s1Day,s2Day,h1Day,h2Day,h3Day,h4Day);
-       
-        cout << endl << "Do you want to try again ? y/n : ";
+
+        cout << endl << "-------------------------------" << endl << "Do you want to try again ? y/n: ";
         cin >> again;
     }
     return 0;
@@ -79,6 +80,7 @@ void calc (long long &day, long long &s1Day, long long &s2Day, long long &h1Day,
     while (day>h4Day) day-=6;
     while (day<s1Day) day+=6;
 
+    cout << "Work condition: ";
     if (day==s1Day) cout << "First day shift";
     else if (day==s2Day) cout << "Second day shift";
     else if (day==h1Day) cout << "First day holiday";
@@ -90,6 +92,7 @@ void calc (long long &day, long long &s1Day, long long &s2Day, long long &h1Day,
 void calcDay (long long &day)
 {
     day%=7;
+    cout << "Day: ";
     switch (day)
     {
         case 1: cout << "Sunday"; break;
