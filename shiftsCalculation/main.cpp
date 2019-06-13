@@ -28,11 +28,14 @@ int main ()
         cout << "Enter year: "; cin >> year;
         cout << "-------------------------------" << endl;
 
-        day = dayCoding (day,mon,year);
-
-        calcDay (day);
-
-        calc (day,s1Day,s2Day,h1Day,h2Day,h3Day,h4Day);
+        if (day>31 || day<=0 || mon>12 || mon<=0 || year<=0)
+            cout << "Error in entering date";
+        else
+        {
+            day = dayCoding (day,mon,year);
+            calcDay (day);
+            calc (day,s1Day,s2Day,h1Day,h2Day,h3Day,h4Day);
+        }
 
         cout << endl << "-------------------------------" << endl << "Do you want to try again ? y/n: ";
         cin >> again;
@@ -87,6 +90,7 @@ void calc (long long &day, long long &s1Day, long long &s2Day, long long &h1Day,
     else if (day==h2Day) cout << "Second day holiday";
     else if (day==h3Day) cout << "Third day holiday";
     else if (day==h4Day) cout << "Fourth day holiday";
+    else cout << "Error in detect work condition";
 }
 
 void calcDay (long long &day)
@@ -99,11 +103,11 @@ void calcDay (long long &day)
 	case 2: cout << "Monday"; break;
 	case 3: cout << "Tuesday"; break;
 	case 4: cout << "Wednesday"; break;
-	case 5: cout << "Thuresday"; break;
+	case 5: cout << "Thursday"; break;
 	case 6: cout << "Friday"; break;
 	case 0:
-	case 7: cout << "Sturday"; break;
-	default : cout << "Error day No. : " << day; break;
+	case 7: cout << "Saturday"; break;
+	default : cout << "Error in detect day"; break;
     }
     cout << endl;
 }
