@@ -53,7 +53,7 @@ long long dayCoding (long long &day, long long &mon, long long &year)
     }
     else mon--; //minus one month because it adding days to month before
 
-    while (year!=0)
+    while (year>0)
     {
         if (mon==1) day+=31;
         else if (mon==2 && year%4==0) day+=29;
@@ -95,19 +95,20 @@ void calc (long long &day, long long &s1Day, long long &s2Day, long long &h1Day,
 
 void calcDay (long long &day)
 {
-    day%=7;
+    int temp=day%7;
     cout << "Day: ";
-    switch (day)
+
+    switch (temp)
     {
         case 1: cout << "Sunday"; break;
-	case 2: cout << "Monday"; break;
-	case 3: cout << "Tuesday"; break;
-	case 4: cout << "Wednesday"; break;
-	case 5: cout << "Thursday"; break;
-	case 6: cout << "Friday"; break;
-	case 0:
-	case 7: cout << "Saturday"; break;
-	default : cout << "Error in detect day"; break;
+        case 2: cout << "Monday"; break;
+        case 3: cout << "Tuesday"; break;
+        case 4: cout << "Wednesday"; break;
+        case 5: cout << "Thursday"; break;
+        case 6: cout << "Friday"; break;
+        case 0:
+        case 7: cout << "Saturday"; break;
+        default : cout << "Error in detect day"; break;
     }
     cout << endl;
 }
