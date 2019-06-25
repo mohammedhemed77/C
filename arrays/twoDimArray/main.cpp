@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 const int row=3;
-const int col=5;
+const int col=4;
 
 //initialize array with zeros
-void initialZero (int arr[][col])
+void initialZero(int arr[][col])
 {
     for (int r=0 ; r<row ; r++)
     {
@@ -14,7 +14,7 @@ void initialZero (int arr[][col])
 }
 
 //fill 2D array
-void fillArr (int arr[][col])
+void fillArr(int arr[][col])
 {
     for (int r=0 ; r<row ; r++)
         for (int c=0 ; c<col ; c++)
@@ -22,7 +22,7 @@ void fillArr (int arr[][col])
 }
 
 //display 2D array
-void display (int arr[][col])
+void display(int arr[][col])
 {
     for (int r=0 ; r<row ; r++)
     {
@@ -33,7 +33,7 @@ void display (int arr[][col])
 }
 
 //sum of array
-void sumArr (int arr[][col])
+void sumArr(int arr[][col])
 {
     int sum=0;
     for (int r=0 ; r<row ; r++)
@@ -41,11 +41,11 @@ void sumArr (int arr[][col])
         for (int c=0 ; c<col ; c++)
             sum+=arr[r][c];
     }
-    cout << "sum of array = " << sum << endl;
+    cout << "Sum of array = " << sum << endl;
 }
 
 //sum of each row
-void sumRow (int arr[][col])
+void sumRow(int arr[][col])
 {
     int sum;
     for (int r=0 ; r<row ; r++)
@@ -53,12 +53,12 @@ void sumRow (int arr[][col])
         sum=0;
         for (int c=0 ; c<col ; c++)
             sum+=arr[r][c];
-        cout << "sum of row " << r+1 << " = " << sum << endl;
+        cout << "Sum of rows " << r+1 << " = " << sum << endl;
     }
 }
 
 //sum of each column
-void sumCol (int arr[][col])
+void sumCol(int arr[][col])
 {
     int sum;
     for (int c=0 ; c<col ; c++)
@@ -66,12 +66,12 @@ void sumCol (int arr[][col])
         sum=0;
         for (int r=0 ; r<row ; r++)
             sum+=arr[r][c];
-        cout << "sum of column " << c+1 << " = " << sum << endl;
+        cout << "Sum of columns " << c+1 << " = " << sum << endl;
     }
 }
 
 //largest number in each row
-void largItemRow (int arr[][col])
+void largItemRow(int arr[][col])
 {
     int largeRow;
     for (int r=0 ; r<row ; r++)
@@ -82,7 +82,7 @@ void largItemRow (int arr[][col])
             if (largeRow<arr[r][c])
                 largeRow=arr[r][c];
         }
-        cout << "large item in row " << r+1 << " = " << largeRow << endl;
+        cout << "Large item in row " << r+1 << " = " << largeRow << endl;
     }
 }
 
@@ -98,12 +98,12 @@ void largItemCol(int arr[][col])
             if (largeCol<arr[r][c])
                 largeCol=arr[r][c];
         }
-        cout << "large item in col " << c+1 << " = " << largeCol << endl;
+        cout << "Large item in column " << c+1 << " = " << largeCol << endl;
     }
 }
 
 //smallest item in array
-void smallItemArray (int arr[][col])
+void smallItemArray(int arr[][col])
 {
     int small=arr[0][0];
     for (int r=0 ; r<row ; r++)
@@ -112,14 +112,13 @@ void smallItemArray (int arr[][col])
             if (small>arr[r][c])
                 small=arr[r][c];
     }
-    cout << "the smallest item in array = " << small << endl;
+    cout << "Smallest item in array = " << small << endl;
 }
 
-int main ()
+int main()
 {
     int arr[row][col];
-
-    cout << "enter " << row*col << " integers: ";
+    cout << "Enter " << row*col << " integers: ";
 
     //initialize array with zeros
     initialZero(arr);
