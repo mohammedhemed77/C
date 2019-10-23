@@ -2,7 +2,7 @@
 #include <stdlib.h> //NULL
 #include<cstdlib> //rand() function
 using namespace std;
-#define MAXSTACK 100
+#define MAXSTACK 10
 
 //user function
 void display(int ele)
