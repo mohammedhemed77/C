@@ -1,7 +1,7 @@
 #include <iostream>
 #include<cstdlib> //rand() function
 using namespace std;
-#define MAXSTACK 100
+#define MAXSTACK 10
 
 //user functions
 void display(int ele)
