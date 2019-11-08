@@ -28,13 +28,13 @@ void append(int ele,Queue *ptr)
 	queueNode *temPtr=(queueNode *)malloc(sizeof(queueNode));
 	temPtr->next=NULL;
 	temPtr->entry=ele;
-	
+
 	//special case when queue is empty
 	if(!ptr->rearOfQueue) //if rearOfQueue point to NULL make frontOfQueue point to new node
 		ptr->frontOfQueue=temPtr; //1
 	else
 		ptr->rearOfQueue->next=temPtr;
-	
+
 	ptr->rearOfQueue=temPtr;//2
 	//from 1 & 2 we make frontOfQueue & rearOfQueue point to new node
 	ptr->sizeOfQueue++;
@@ -42,16 +42,16 @@ void append(int ele,Queue *ptr)
 
 void serve(int *ele,Queue *ptr)
 {
-	queueNode temPtr=ptr->frontOfQueue;
+	queueNode *temPtr=ptr->frontOfQueue;
 	*ele=temPtr->entry; //put element in (*ele)
-	
+
 	ptr->frontOfQueue=temPtr->next;
 	free(temPtr);
-	
+
 	//special case when queue have one node
-	if(!ptr->front) //if frontOfQueue point to NULL means that queue became empty
+	if(!ptr->frontOfQueue) //if frontOfQueue point to NULL means that queue became empty
 		ptr->rearOfQueue=NULL; //make rearOfQueue point to NULL
-	
+
 	ptr->sizeOfQueue--;
 }
 
@@ -62,10 +62,9 @@ bool isFull(Queue *ptr)
 
 bool isEmpty(Queue *ptr)
 {
-	/*all this returns are correct 
+	/*all this returns are correct
 	return !(ptr->frontOfQueue);
 	return !(ptr->rearOfQueue);*/
-	
 	return !(ptr->sizeOfQueue);
 }
 
@@ -88,7 +87,7 @@ void clearQueue(Queue *ptr)
 void traverseQueue(void(*pf)(int),Queue *ptr)
 {
 	queueNode *temPtr=ptr->frontOfQueue;
-	
+
 	for(;temPtr;temPtr=temPtr->next)
 		(*pf)(temPtr->entry);
 }
